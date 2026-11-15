@@ -257,3 +257,88 @@
 
 1. The homepage collage used square cells with `object-fit: contain` on white, which letterboxed the 859 x 1200 artwork. Cells now follow the artwork ratio (`height: auto`). The white fill and the mist frame were removed to match the other exploration cards. No artwork is cropped.
 2. Verified in a real browser capture at 1280px.
+
+## Add Photo Vocab App (in progress)
+
+1. Added a Photo Vocab App card to the UI/UX group after Sheridan Ride, reusing the card structure: mist hand-cut cover with tape and an "In progress" label. Ashley's text is unchanged: the one-line summary plus Who / The pivot / Key insight, reusing the hero `dt` caption style.
+2. The card is not a link and has no project route or "Read more", as requested.
+3. New CSS: `.project-tag` (accent-green pill, the Figma tag colour, for the subtle "In progress" status) and small layout rules for `.project-summary` and `.project-notes`. `.project > h4` now styles card titles with or without a link.
+4. Served the site on localhost:3000 (`python3 -m http.server`; there is no `serve.mjs` in this project) and captured the card at 1280 and 500px.
+
+## Photo Vocab App gets a page; Photo Search App removed
+
+1. The Photo Vocab App card is now a link to `project.html?id=photo-vocab-app` and shows only the cover, title, and "In progress" tag. Ashley's text moved to the project page unchanged: the one-liner is the intro, and Who, The pivot, and Key insight are sections. The table of contents is generated from them.
+2. Removed the Photo Search App card. Its route was already gone from project.js. The `.project-summary` and `.project-notes` CSS was removed because nothing uses it now.
+3. Cross-checked that every homepage card has a route: 14 cards and 14 routes, none missing or unused. The route-count assertion passes again. Captured the card and the page on localhost:3000 at 1280px.
+
+## All UI/UX projects marked In progress
+
+1. Sheridan Ride and Case Study Workspace now use the green `.project-tag` "In progress" pill, like Photo Vocab App. The status was removed from their gray meta text. The Case Study Workspace cover label changed from "Coming soon" to "In progress", so the homepage no longer shows "Coming soon" anywhere.
+2. Captured the UI/UX group on localhost:3000 at 1280px.
+
+## Sheridan Ride rewritten around role and process
+
+1. Replaced the pitch-style Sheridan Ride text with Ashley's new content: an intro, then The problem, The key insight, What I did, and Design decisions (items 1-4). The six screenshots and the layout are unchanged. The old hidden sections were removed, as the request replaced them.
+2. Added an optional `facts` field to project data. The header renders it as an info row (My role, Team, Timeline, Tools), reusing the hero `.facts` style through `.case-facts`: four columns on desktop, two at 1000px and below, one on phones.
+3. Design decision 5 ("We kept it simple") arrived cut off mid-sentence, so it is kept in a comment until Ashley sends the full text.
+4. The side table of contents regenerated from the new headings, and the scrollspy marks the current section. Captured on localhost:3000 at 1280px (top, sections, design decisions) and at 500px.
+
+## Sheridan Ride role and What I did
+
+1. The info row now reads My role "UX/UI Design Lead · Product Management" and Tools "Figma, Notion".
+2. What I did is split into Design and Product management h3 subheadings with Ashley's bullets. Nothing else changed.
+
+## Case Study Workspace simplified
+
+1. Added an optional `status` field to project data, rendered under the intro with the existing `.muted` style. Case Study Workspace now shows "In progress · This idea is still being shaped. More details coming soon."
+2. The problem keeps one sentence. How it works, Why it is different, MVP features, Future direction, and Tech are headings only, and their hidden text was deleted as requested. The eyebrow, title, intro, and sidebar are unchanged. Captured on localhost:3000 at 1280px.
+
+## Trim Case Study Workspace sections
+
+1. Removed the MVP features, Future direction, and Tech sections. The template literal now closes after Why it is different. Syntax checked, and the table of contents regenerates with the remaining sections.
+
+## Trim Case Study Workspace sections
+
+1. Removed the MVP features, Future direction, and Tech sections. The template literal now closes after Why it is different. Syntax checked, and the table of contents regenerates with Overview, The problem, How it works, and Why it is different.
+
+## Roopy galleries use the shared grid
+
+1. Endpaper Talks galleries looked tidy because the count-based `.case-gallery:has(...)` rules overrode their `gallery-two` class. Roopy galleries kept `gallery-two` (2 columns with lone last items) and `gallery-one`. All roopy and Endpaper galleries now use the plain `.case-gallery` grid, whose column count follows the item count (2 → 2, 3/5/6 → 3, 4/7 → 4). Order and text are unchanged.
+2. `.case-gallery` now has `align-items: start`. The count rules are wrapped in `:where()` so the mobile rule can override them, and every case gallery is one column at 600px and below. This also fixes Endpaper, which previously stayed at 4 columns on phones. The unused `.gallery-two` rule was removed. `.gallery-one` remains for single-image pages.
+3. Captured roopy (four positions), Endpaper, and roopy at 500px on localhost:3000.
+
+## Roopy media cleanup
+
+1. Cover: the header gallery shows copies of the two long hand cream editorial images (top row) and the SKIN Tea Break and 茶染长夜 posters (bottom row) in a 2x2 grid. Project data can now set `galleryClass`. `.case-gallery:where(.gallery-two)` is a fixed 2-column rule that still drops to 1 column on mobile.
+2. The homepage roopy card shows only the SKIN Tea Break poster. `.cover-art:has(> img:only-child)` gives a single image the full width.
+3. Brand content: the Xiaohongshu profile image is hidden inside an HTML comment with restore instructions. The text and the lupine poster stay, so the heading stays.
+4. Skin Tea Break: row 1 has the plate, SKIN Tea Break, and 茶染长夜 images. Row 2 has the two videos with `autoplay muted loop playsinline` and no controls. `project.js` turns autoplay off and shows controls when `prefers-reduced-motion` is set.
+5. Weekend playlist was replaced by "Social posts" (lupine copy + playlist) at the end. All cover images are copies, and the originals stay in their sections.
+6. Captured on localhost:3000: cover, Skin Tea Break, editorial, Social posts, the homepage card at 1280px, and roopy at 500px.
+
+## Roopy corrections
+
+1. The homepage roopy card shows the two long hand cream editorial images (看见女性 and ingredients). `.cover-art:has(> :nth-child(2):last-child)` gives two images two equal columns, replacing the single-image rule.
+2. Removed the 2x2 cover at the top of the roopy page because it repeated images further down. Removed the `galleryClass` option and the `.gallery-two` rule that only it used.
+3. Removed the lupine poster from Brand content. The Social posts copy stays, and the hidden Xiaohongshu profile comment is still there.
+4. Captured the homepage card and the roopy page top on localhost:3000 at 1280px.
+
+## Roopy card shows four images
+
+1. The homepage roopy card cover now shows four images in one row: SKIN Tea Break, 茶染长夜, then the two long hand cream editorial images.
+2. `.cover-art` now uses `grid-auto-flow: column` with equal auto columns, so any number of images gets equal columns. This replaced the two-image `:has` rule. The Endpaper card (three images) is unchanged.
+3. Captured on localhost:3000 at 1280px. Ashley's screenshot showed an older cached version, so a hard refresh is needed.
+
+## Visual design cards tidied
+
+1. The roopy card shows three images: SKIN Tea Break, 茶染长夜, and the 看见女性 long image.
+2. New `.cover-art-crop` modifier (roopy card only): each image is the same 3:4 box with `object-fit: cover; object-position: top`, so the long image shows its top part and the posters stay whole. The Endpaper posters already share one size and are unchanged.
+3. `.cover-art` centres its images (`place-items: center`).
+4. `.cover` has `min-height: 0` so tall artwork can no longer grow a cover past its 587:360 ratio. Both cards are now the same height and the captions line up (verified at 1280px).
+
+## Endpaper card layout restored
+
+1. After the previous change, the Endpaper posters ran past the bottom of the black paper. The cause: `.cover` sized its implicit grid row to its content, so tall artwork stretched the row past the locked cover (before the change, the whole cover had grown taller instead). `.cover` now has `grid-template-rows: minmax(0, 1fr)`, which keeps artwork inside the 80% area with the paper margin around it and keeps both captions aligned.
+2. The centring added last time is now limited to `.cover-art-crop` (the roopy card) and removed from the shared `.cover-art`.
+3. Captured the Visual design and UI/UX cards on localhost:3000 at 1280px.
+4. At Ashley's request, the roopy card cover is now the MBTI infographic, the SKIN Tea Break poster, and the 招募·情绪体验官 poster (all 3:4, so none is cropped). Captured at 1280px.
