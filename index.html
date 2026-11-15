@@ -3,14 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashley Design</title>
+  <meta name="description" content="Ashley Ma — Design × Front-end × AI.">
+  <title>Ashley Ma ｜ Design × Front-end × AI</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/brand_assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,300&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <main class="hero">
-    <h1>Hi, I'm Ashley</h1>
-    <p>Designer & front-end developer in Toronto.</p>
-    <a class="btn" href="https://linkedin.com/in/ashleymadesign">LinkedIn</a>
-  </main>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="filter-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="rough-edge" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="7"/></filter>
+  </svg>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ASH home"><img src="assets/brand_assets/ASHlogo.svg" width="96" height="39" alt="ASH"></a>
+      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="intro">
+        <div class="hero-title"><h1 id="intro">Ashley Ma</h1><p class="tagline">A product designer who can design it, code it, and make it feel right.</p></div>
+        <dl class="facts">
+          <div><dt>Currently</dt><dd>Interactive Media Management<br>@ Sheridan College</dd></div>
+          <div><dt>Previously</dt><dd>Graphic design and social media, 3 years<br>Visual Communication Design, BA</dd></div>
+          <div><dt>Focus</dt><dd>Design × Front-end × AI</dd></div>
+        </dl>
+      </section>
+      <section id="work" class="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected work</h2>
+        <div class="work-group">
+          <h3 id="uiux-title" class="group-title">UI/UX</h3>
+          <div class="project-grid">
+            <a class="project-card-link" href="project.html?id=sheridan-ride"><article class="project">
+              <div class="cover cover-lavender"><span class="paper" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span><span class="sheridan-screens" aria-hidden="true">
+                <img src="assets/images/sheridanRide/01-home-page.png" width="804" height="1748" alt="" loading="lazy" decoding="async"><img src="assets/images/sheridanRide/02-search-results.png" width="804" height="1748" alt="" loading="lazy" decoding="async"><img src="assets/images/sheridanRide/04-posted-ride-details.png" width="804" height="1748" alt="" loading="lazy" decoding="async">
+              </span></div>
+              <h4>Sheridan Ride</h4><p class="project-meta">UX/UI · 2026 · In progress</p>
+            </article></a>
+            <a class="project-card-link" href="project.html?id=case-study-workspace"><article class="project">
+              <div class="cover cover-mist"><span class="paper" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span><span class="cover-note" aria-hidden="true">Coming soon</span></div>
+              <h4>Case Study Workspace</h4><p class="project-meta">Web app concept · Coming soon</p>
+            </article></a>
+            <a class="project-card-link" href="project.html?id=photo-search-app"><article class="project">
+              <div class="cover cover-mist"><span class="paper" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span><span class="cover-note" aria-hidden="true">Coming soon</span></div>
+              <h4>Photo Search App</h4><p class="project-meta">Product concept · Coming soon</p>
+            </article></a>
+          </div>
+        </div>
+        <div class="work-group">
+          <h3 id="visual-title" class="group-title">Visual design</h3>
+          <div class="project-grid">
+            <a class="project-card-link" href="project.html?id=roopy"><article class="project">
+              <div class="cover cover-mist"><span class="paper" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span><span class="cover-art" aria-hidden="true"><img src="assets/images/portfolio/roopy-fragrance.jpg" width="900" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-hand-cream.jpg" width="900" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-playlist.jpg" width="900" height="1200" alt="" loading="lazy" decoding="async"></span></div>
+              <h4>roopy</h4><p class="project-meta">Social content · 2024–25</p>
+            </article></a>
+            <a class="project-card-link" href="project.html?id=endpaper-talks"><article class="project">
+              <div class="cover cover-ink"><span class="paper" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span><span class="cover-art" aria-hidden="true"><img src="assets/images/portfolio/endpaper-talks.jpg" width="494" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/x-art-bookshop.jpg" width="494" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/parallel-institute.jpg" width="494" height="1200" alt="" loading="lazy" decoding="async"></span></div>
+              <h4>Endpaper Talks</h4><p class="project-meta">Event identity · 2022</p>
+            </article></a>
+          </div>
+        </div>
+      </section>
+      <section class="work personal-work" aria-labelledby="personal-title">
+        <h2 id="personal-title">Personal explorations</h2><p class="section-intro">Non-commercial design studies.</p>
+        <div class="exploration-grid">
+          <a href="project.html?id=standing-bar"><article class="exploration-card"><img src="assets/images/portfolio/standing-bar.jpg" width="800" height="1200" alt="Standing Bar poster with monochrome street photography and orange lettering" loading="lazy" decoding="async"><h3>Standing Bar</h3><p>Poster study</p></article></a>
+          <a href="project.html?id=araki"><article class="exploration-card"><img src="assets/images/portfolio/araki.jpg" width="857" height="1200" alt="Araki exhibition poster with monochrome photography" loading="lazy" decoding="async"><h3>Nobuyoshi Araki</h3><p>Poster study</p></article></a>
+          <a href="project.html?id=hokusai"><article class="exploration-card"><img src="assets/images/portfolio/hokusai.jpg" width="857" height="1200" alt="Hokusai exhibition poster with Japanese prints and blue typography" loading="lazy" decoding="async"><h3>Hokusai</h3><p>Poster study</p></article></a>
+          <a href="project.html?id=failure-cat"><article class="exploration-card"><img src="assets/images/portfolio/failure-cat-1.jpg" width="720" height="1200" alt="Failure Cat collage poster" loading="lazy" decoding="async"><h3>Song of the Failure Cat</h3><p>Poster series</p></article></a>
+          <a href="project.html?id=christmas"><article class="exploration-card"><img src="assets/images/portfolio/christmas-series.jpg" width="900" height="1200" alt="Christmas graphic compositions in red, green, and cream" loading="lazy" decoding="async"><h3>Christmas graphics</h3><p>Poster series</p></article></a>
+          <a href="project.html?id=disco-ball"><article class="exploration-card"><img src="assets/images/portfolio/disco-ball.jpg" width="867" height="1200" alt="Disco Ball poster with monochrome imagery and yellow accents" loading="lazy" decoding="async"><h3>Disco Ball</h3><p>Poster study</p></article></a>
+          <a href="project.html?id=candy"><article class="exploration-card"><img src="assets/images/portfolio/candy.jpg" width="1200" height="1200" alt="Candy poster with a yellow banana illustration and bilingual lyrics" loading="lazy" decoding="async"><h3>Candy</h3><p>Poster study</p></article></a>
+          <a href="project.html?id=drink-packaging"><article class="exploration-card"><div class="exploration-collage" aria-hidden="true"><img src="assets/images/portfolio/packaging-0206-02.jpg" width="859" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/packaging-0206-03.jpg" width="859" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/packaging-0210-04.jpg" width="859" height="1200" alt="" loading="lazy" decoding="async"><img src="assets/images/portfolio/packaging-0210-05.jpg" width="859" height="1200" alt="" loading="lazy" decoding="async"></div><h3>Drink Packaging</h3><p>Packaging design</p></article></a>
+          <a href="project.html?id=cat-climbing-frame"><article class="exploration-card"><img src="assets/images/portfolio/cat-climbing-frame.jpg" width="900" height="1200" alt="Purple cat climbing frame graphic design" loading="lazy" decoding="async"><h3>Cat Climbing Frame</h3><p>Graphic study</p></article></a>
+        </div>
+      </section>
+      <section id="about" class="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2><p class="body-large">Half designer, half developer, fully obsessed with the details in between.</p>
+        <div id="resume" class="resume"><a class="contact-link" href="assets/Ashley_Ma_Resume.docx" download>Download resume (DOCX)</a></div>
+      </section>
+    </main>
+    <footer id="contact" class="site-footer"><div class="footer-row"><p class="signature">Ashley</p><div class="footer-links"><a class="contact-link" href="https://www.linkedin.com/in/ashleymadesign/">LinkedIn</a><a class="contact-link" href="mailto:Ashley.ma0902@gmail.com">Email</a></div></div></footer>
+  </div>
 </body>
 </html>

@@ -1,0 +1,115 @@
+const image = (src, alt, width, height) => ({ src, alt, width, height });
+
+const projects = {
+  "sheridan-ride": {
+    title: "Sheridan Ride",
+    category: "UX/UI · Student carpool platform",
+    intro: "A student-only carpool platform that matches Sheridan students by route, time, and destination — not only by the same starting point.",
+    images: [
+      image("assets/images/sheridanRide/01-home-page.png", "Sheridan Ride home screen with route search and map", 804, 1748),
+      image("assets/images/sheridanRide/02-search-results.png", "Sheridan Ride search results listing four available rides", 804, 1748),
+      image("assets/images/sheridanRide/03-confirm-ride.png", "Sheridan Ride confirm ride screen with route map, seats, payment, and price", 804, 1748),
+      image("assets/images/sheridanRide/04-posted-ride-details.png", "Sheridan Ride booked ride details with driver and route", 804, 1748),
+      image("assets/images/sheridanRide/05-post-a-ride.png", "Sheridan Ride post a ride form with seats and price per seat", 804, 1748),
+      image("assets/images/sheridanRide/06-ride-details.png", "Sheridan Ride posted ride accepting requests, seen by the driver", 804, 1748)
+    ],
+    content: `
+      <section class="case-section"><h2>Background &amp; insight</h2><p>Canada is spread out, so it can be difficult to find students who begin in exactly the same place. Sheridan Ride matches students along a route, allowing people who are already on the way to join and increasing the chance of finding a ride.</p></section>
+      <section class="case-section"><h2>Problems</h2><!-- Hidden for now: <div class="case-columns"><div><h3>Passengers</h3><ul><li>Public transit can take a long time, especially with waits and transfers.</li><li>Uber and Lyft are too expensive for everyday commuting.</li><li>Students without cars have limited options.</li></ul></div><div><h3>Drivers and riders</h3><ul><li>Drivers carry gas and commuting costs alone.</li><li>Students with similar routes may not know how to find or contact one another.</li><li>Exact starting-point matches are difficult to find.</li></ul></div></div> --></section>
+      <section class="case-section"><h2>Solution</h2><!-- Hidden for now: <p>Match students using route, time, and destination. Riders can be picked up nearby, join along the driver’s route, or meet at a convenient pickup point when a direct pickup would require too much detour.</p><p>A flexible pickup point also supports longer trips: a rider can walk, take transit, or use a short ride service to meet the car along its existing route.</p> --></section>
+      <section class="case-section"><h2>Main value</h2><!-- Hidden for now: <ul class="value-list"><li>Save time</li><li>Save money</li><li>Share commuting costs</li><li>Increase match chances</li><li>Offer flexible pickup</li><li>Keep the community student-only</li></ul> --></section>
+      <section class="case-section"><h2>Key features</h2><!-- Hidden for now: <h3>Match system</h3><p>A match score compares route, time, and destination: 90% for a nearby and highly similar trip, 75% for a small detour, and 60% for a partly shared route that may need a meeting point.</p><div class="case-columns"><div><h3>Find a ride</h3><ol><li>Enter location and destination.</li><li>Choose departure or arrival time.</li><li>View matching rides.</li></ol></div><div><h3>Offer a ride</h3><ol><li>Enter route and departure time.</li><li>Add available seats and an acceptable detour.</li><li>View matching passengers.</li></ol></div></div> --></section>
+      <section class="case-section"><h2>User flow</h2><!-- Hidden for now: <p class="flow-line">Login → Find or offer a ride → Enter route and time → View matches → Confirm ride</p> --></section>`
+  },
+  "case-study-workspace": {
+    title: "Case Study Workspace",
+    category: "Web application concept",
+    intro: "A web app for design students to save process screenshots while they work, then turn that material into a portfolio case study.",
+    images: [],
+    content: `
+      <section class="case-section"><h2>The problem</h2><p>Students need to show their design process, but they often do not save it while they work. Later, they may forget why they made each decision.</p></section>
+      <section class="case-section"><h2>How it works</h2><!-- Hidden for now: <ol class="steps"><li><b>Create a project.</b> Add the brief and deadline.</li><li><b>Save as you go.</b> Drag or paste screenshots into the project; the app records the date.</li><li><b>See the timeline.</b> Organize screenshots by Research, Moodboard, Concept, and Final.</li><li><b>Make a case study.</b> Answer short questions about design decisions, then edit an AI-assisted first draft.</li></ol> --></section>
+      <section class="case-section"><h2>Why it is different</h2><!-- Hidden for now: <p>Other tools help people write a case study after a project from memory. This workspace is used during the project, so the process is collected before the final story is written.</p><p>It is a case study builder rather than another portfolio website builder. Users can later publish the result on their own site, Notion, UXfolio, or another platform.</p> --></section>
+      <section class="case-section"><h2>MVP features</h2><!-- Hidden for now: <ul class="value-list"><li>Sign up and log in</li><li>Create, edit, and delete projects</li><li>Upload or paste screenshots</li><li>Timeline by stage</li><li>Optional screenshot notes</li><li>Export as a web page</li></ul> --></section>
+      <section class="case-section"><h2>Future direction</h2><!-- Hidden for now: <p>Later ideas include AI questions and drafting, comments from teachers and classmates, stage templates for other professions, a browser extension, and an embeddable case study.</p> --></section>
+      <section class="case-section"><h2>Tech</h2><!-- Hidden for now: <p>HTML, CSS, JavaScript, Python, and MySQL.</p> --></section>`
+  },
+  "photo-search-app": {
+    title: "Photo Search App",
+    category: "Product concept",
+    intro: "A photo management and search app that helps people find photos the way they remember them.",
+    images: [],
+    content: `
+      <section class="case-section"><h2>The problem</h2><p>People struggle to find the photo they want, even when they remember the event. They usually search their phone’s default photo library by date, location, or keywords, but if they cannot remember these details accurately, they may not find the photo.</p></section>
+      <section class="case-section"><h2>The solution</h2><!-- Hidden for now: <p>People often remember roughly when something happened rather than the exact date. When looking for a photo, the first thing that comes to mind is often the event itself, but their photo library lacks a way to organize photos around those memories.</p><p>The app organizes photos by events and memory cues, helping people find photos in a way that matches how they naturally remember them.</p> --></section>`
+  },
+  roopy: {
+    title: "roopy", category: "Graphic design & social media",
+    intro: "Brand visuals and social content developed across fragrance campaigns, editorial layouts, Skin Tea Break, and a weekend playlist series.", images: [],
+    content: `
+      <section class="case-section"><h2>Brand content</h2><p>Created brand visuals and planned content for Xiaohongshu, WeChat, and Weibo. Developed creative graphics and videos based on product features and brand style to strengthen the brand image. In April, gained 1,000+ followers. Likes increased by 65%, saves by 93%, comments by 321%, shares by 211%, and product conversion by 33%.</p><div class="case-gallery gallery-two"><img src="assets/images/portfolio/roopy-profile.jpg" width="625" height="1200" alt="roopy Xiaohongshu brand profile and posts" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-lupine.jpg" width="900" height="1200" alt="roopy social post with lupine flowers and a Chinese quotation" loading="lazy" decoding="async"></div></section>
+      <section class="case-section"><h2>Skin Tea Break</h2><!-- Hidden for now: <p>Developed the “Skin Tea Break” content series by highlighting product features and matching the brand style. Created high-quality graphics and videos with a French countryside aesthetic to strengthen the brand image and add value to the products.</p> --><div class="case-gallery gallery-two"><img src="assets/images/portfolio/roopy-skin-tea-plate.jpg" width="900" height="1200" alt="Skin Tea Break cover with an empty plate and cutlery on pink linen" loading="lazy" decoding="async"><video src="assets/videos/roopy-skin-tea-invitation.mp4" poster="assets/images/portfolio/roopy-skin-tea-invitation-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Skin Tea Break invitation video with a dessert plate"></video><video src="assets/videos/roopy-skin-tea-launch.mp4" poster="assets/images/portfolio/roopy-skin-tea-launch-poster.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Skin Tea Break launch video with hand creams in a glass bowl"></video><img src="assets/images/portfolio/roopy-skin-tea-hand-cream.jpg" width="900" height="1200" alt="Skin Tea Break poster with four hand creams on a table" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-hand-cream.jpg" width="900" height="1200" alt="roopy hand cream composition in warm afternoon light" loading="lazy" decoding="async"></div></section>
+      <section class="case-section"><h2>WeChat editorial layouts</h2><div class="case-gallery gallery-two"><img src="assets/images/portfolio/roopy-editorial-polish.jpg" width="828" height="1472" alt="roopy Runse editorial layout with green woodland imagery" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-editorial-listen.jpg" width="828" height="1472" alt="roopy Runse editorial layout about listening to green" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-editorial-women-intro.jpg" width="828" height="1472" alt="roopy editorial introduction about seeing women's hands" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-editorial-women-story.jpg" width="828" height="1472" alt="roopy editorial layout featuring Virginia Woolf" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-editorial-women-product.jpg" width="828" height="1472" alt="roopy hand cream editorial product layout" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-editorial-women-ingredients.jpg" width="828" height="1472" alt="roopy hand cream ingredient editorial layout" loading="lazy" decoding="async"></div></section>
+      <section class="case-section"><h2>Fragrance campaign</h2><div class="case-gallery gallery-two"><img src="assets/images/portfolio/roopy-mbti.jpg" width="900" height="1200" alt="roopy MBTI infographic pairing personality letters with products" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-fragrance.jpg" width="900" height="1200" alt="roopy fragrance campaign with green foliage and Chinese typography" loading="lazy" decoding="async"><img src="assets/images/portfolio/roopy-fragrance-details.jpg" width="900" height="1200" alt="roopy fragrance campaign participation details on a green background" loading="lazy" decoding="async"></div></section>
+      <section class="case-section"><h2>Weekend playlist</h2><div class="case-gallery gallery-one"><img src="assets/images/portfolio/roopy-playlist.jpg" width="900" height="1200" alt="roopy weekend playlist artwork with a green landscape" loading="lazy" decoding="async"></div></section>`
+  },
+  "endpaper-talks": {
+    title: "Endpaper Talks", category: "Event identity",
+    intro: "Online and offline visual design for an art book club, including event posters and promotional materials.",
+    images: [image("assets/images/portfolio/endpaper-talks.jpg", "Black and white Endpaper Talks art book event poster", 494, 1200), image("assets/images/portfolio/x-art-bookshop.jpg", "X-Art Bookshop poster with illustrated hands and books", 494, 1200), image("assets/images/portfolio/parallel-institute.jpg", "Parallel Institute poster with illustrated hands", 494, 1200)],
+    content: `
+      <section class="case-section"><h2>Project</h2><p>The visual system supported an art book club across online promotion and physical event materials.</p></section>
+      <section class="case-section"><h2>Exhibition photographs</h2><div class="case-gallery gallery-two"><img src="assets/images/portfolio/endpaper-exhibition-1.jpg" width="1200" height="1600" alt="Endpaper Talks exhibition installation" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-exhibition-2.jpg" width="1200" height="1600" alt="Endpaper Talks exhibition display" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-exhibition-3.jpg" width="1600" height="1283" alt="Endpaper Talks event space" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-exhibition-4.jpg" width="1200" height="1600" alt="Endpaper Talks printed materials at the exhibition" loading="lazy" decoding="async"></div></section>
+      <section class="case-section"><h2>Editorial and social content</h2><div class="case-gallery gallery-two"><img src="assets/images/portfolio/endpaper-social-schedule.jpg" width="828" height="1472" alt="Endpaper Talks schedule for four art book publishing events" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-social-oliver.jpg" width="828" height="1472" alt="Endpaper Talks feature about Oliver Wood and Beam Editions" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-social-chang.jpg" width="828" height="1472" alt="Endpaper Talks feature about Chang Yuchen" loading="lazy" decoding="async"><img src="assets/images/portfolio/endpaper-social-week-four.jpg" width="828" height="1472" alt="Endpaper Talks week four event schedule" loading="lazy" decoding="async"></div></section>`
+  },
+  "standing-bar": { title: "Standing Bar", category: "Poster study", intro: "Photography and expressive typography.", images: [image("assets/images/portfolio/standing-bar.jpg", "Standing Bar poster with monochrome street photography and orange lettering", 800, 1200)], content: "" },
+  araki: { title: "Nobuyoshi Araki", category: "Poster study", intro: "A photography-led exhibition poster exploration.", images: [image("assets/images/portfolio/araki.jpg", "Araki exhibition poster with monochrome photography", 857, 1200)], content: "" },
+  hokusai: { title: "Hokusai", category: "Poster study", intro: "An exploration of image arrangement and editorial typography.", images: [image("assets/images/portfolio/hokusai.jpg", "Hokusai exhibition poster with Japanese prints and blue typography", 857, 1200)], content: "" },
+  "failure-cat": { title: "Song of the Failure Cat", category: "Poster series", intro: "Collage and bilingual typographic experiments.", images: [image("assets/images/portfolio/failure-cat-1.jpg", "Failure Cat collage poster", 720, 1200), image("assets/images/portfolio/failure-cat-2.jpg", "Song of the Failure Cat bilingual typographic poster", 720, 1200)], content: "" },
+  christmas: { title: "Christmas graphics", category: "Poster series", intro: "Seasonal typography and graphic compositions.", images: [image("assets/images/portfolio/christmas-series.jpg", "Christmas graphic compositions in red, green, and cream", 900, 1200), image("assets/images/portfolio/christmas-poster.jpg", "Christmas tree poster in cream and green", 800, 1200), image("assets/images/portfolio/christmas-green-poster.jpg", "Green Christmas tree poster with red and cream typography", 900, 1200)], content: "" },
+  "disco-ball": { title: "Disco Ball", category: "Poster study", intro: "A monochrome image with bright graphic accents.", images: [image("assets/images/portfolio/disco-ball.jpg", "Disco Ball poster with monochrome imagery and yellow accents", 867, 1200)], content: "" },
+  candy: { title: "Candy", category: "Poster study", intro: "Bilingual lyrics, collage, and image-making.", images: [image("assets/images/portfolio/candy.jpg", "Candy poster with a yellow banana illustration and bilingual lyrics", 1200, 1200)], content: "" },
+  "drink-packaging": { title: "Drink Packaging", category: "Packaging design", intro: "A four-piece packaging design study.", images: [image("assets/images/portfolio/packaging-0206-02.jpg", "Orange solid milk tea drink packaging design", 859, 1200), image("assets/images/portfolio/packaging-0206-03.jpg", "Blue matcha soy drink packaging design", 859, 1200), image("assets/images/portfolio/packaging-0210-04.jpg", "Pink black tea milk drink packaging design", 859, 1200), image("assets/images/portfolio/packaging-0210-05.jpg", "Green matcha milk drink packaging design", 859, 1200)], content: "" },
+  "cat-climbing-frame": { title: "Cat Climbing Frame", category: "Graphic study", intro: "A graphic design study for a cat climbing frame.", images: [image("assets/images/portfolio/cat-climbing-frame.jpg", "Purple cat climbing frame graphic design", 900, 1200), image("assets/images/portfolio/cat-climbing-frame-series.jpg", "Cat climbing frame graphic series presentation", 471, 1200), image("assets/images/portfolio/cat-climbing-frame-pattern.jpg", "Dot-pattern cat climbing frame poster", 800, 1200)], content: "" }
+};
+
+console.assert(Object.keys(projects).length === 14, "Every portfolio project needs a detail route.");
+const project = projects[new URLSearchParams(window.location.search).get("id")];
+const container = document.querySelector("#project-content");
+
+if (!project) {
+  document.title = "Project not found — Ashley Ma";
+  container.innerHTML = `<header class="case-header"><p class="eyebrow">Portfolio</p><h1>Project not found</h1><p>Return to the project list and choose another project.</p></header><a class="back-link" href="index.html#work">← Back to work</a>`;
+} else {
+  document.title = `${project.title} — Ashley Ma`;
+  const gallery = project.images.length ? `<div class="case-gallery ${project.images.length === 1 ? "gallery-one" : ""}">${project.images.map(({ src, alt, width, height }, index) => `<img src="${src}" alt="${alt}" width="${width}" height="${height}" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`).join("")}</div>` : "";
+  container.innerHTML = `<header class="case-header"><p class="eyebrow">${project.category}</p><h1>${project.title}</h1><p class="case-intro">${project.intro}</p></header>${gallery}${project.content}<a class="back-link" href="index.html#work">← Back to all work</a>`;
+}
+
+// Fill the left rail's table of contents: Overview plus each section heading.
+if (project) {
+  const nav = document.querySelector(".toc");
+  const sections = [container.querySelector(".case-header"), ...container.querySelectorAll(".case-section")];
+  const label = (section, index) => index ? section.querySelector("h2").textContent : "Overview";
+  sections.forEach((section, index) => {
+    section.id = index ? label(section, index).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") : "overview";
+    section.tabIndex = -1;
+  });
+  nav.replaceChildren();
+  const links = sections.map((section, index) => nav.appendChild(Object.assign(document.createElement("a"), { className: "toc-link", href: `#${section.id}`, textContent: label(section, index) })));
+  links[0].setAttribute("aria-current", "true");
+  // shortcut: IntersectionObserver only (works in every browser); native scroll-target-group is Chrome-only today.
+  const observer = new IntersectionObserver((entries) => entries.forEach(({ isIntersecting, target }) => {
+    if (!isIntersecting) return;
+    links.forEach((link) => link.hash === `#${target.id}` ? link.setAttribute("aria-current", "true") : link.removeAttribute("aria-current"));
+  }), { rootMargin: "-30% 0px -60% 0px" });
+  sections.forEach((section) => observer.observe(section));
+}
+
+// "← Back" returns to the previous page when it was on this site; otherwise the link goes to the work list.
+document.querySelector(".page-back").addEventListener("click", (event) => {
+  if (document.referrer && new URL(document.referrer).origin === window.location.origin) {
+    event.preventDefault();
+    history.back();
+  }
+});

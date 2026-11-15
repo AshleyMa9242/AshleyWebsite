@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-15T04:26:25.814Z",
+        "reason": "agent decision: Figma Ash visual identity type scale specifies Display 72/105% and H1 48/110% for the hero and section headings; body text stays at 1.5"
+      }
+    ]
+  }
+}
