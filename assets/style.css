@@ -1,28 +1,33 @@
 :root {
-  --color-lavender: #C3A6CD;
-  --color-green: #C9D77E;
-  --color-ink: #1A1A1A;
-  --color-bg: #F5F5F5;
-  --color-mist: #E8E8E8;
-  --color-white: #FFFFFF;
-  --color-line: rgba(26, 26, 26, 0.2);
-  --color-text-secondary: #444444;
-  --color-text-muted: #6B6B6B;
+  --color-bg: #FBF4E1;              /* page background (60%) - light tint of Pantone Anise Flower */
+  --color-card: #F37E9B;            /* project cards, simple screenshots (30%) - Pantone Rosy Future */
+  --color-card-neutral: #F3EAD2;    /* project cards, colorful screenshots - warm sand */
+  --color-accent: #3AB0A2;          /* tags, active/hover link line (10%) - Pantone Waterfall */
+  --color-text: #1A1A1A;            /* main text */
+  --color-text-muted: rgba(26, 26, 26, 0.72);  /* secondary text */
+  --color-line: rgba(26, 26, 26, 0.2);         /* footer divider (kept) */
+  --color-green: #C9D77E;           /* only the unused .flow-line still refers to this */
+  --color-white: #FFFFFF;           /* currently unused */
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--color-bg); color: var(--color-ink); font-family: 'Nunito Sans', sans-serif; font-size: 1rem; line-height: 1.5; }
+body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: 'Nunito Sans', sans-serif; font-size: 1rem; line-height: 1.5; }
 h1, h2, h3, h4, p, figure, dl, dd { margin: 0; }
 a { color: inherit; text-underline-offset: .3em; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
-::selection { color: var(--color-ink); background: var(--color-green); }
+:focus-visible { outline: 2px solid var(--color-text); outline-offset: 2px; }
+::selection { color: var(--color-text); background: var(--color-accent); }
 .page { width: min(1200px, calc(100% - 240px)); margin-inline: auto; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 40px; }
-.brand { display: inline-flex; padding: 10px; margin-left: -10px; }
-.brand img { display: block; width: 96px; height: auto; filter: brightness(0) invert(9.4%); }
+/* min-height keeps the header at 139px now that the logo is 26px tall. */
+.brand { display: inline-flex; align-items: center; min-height: 59px; padding: 10px; margin-left: -10px; }
+.brand img { display: block; width: auto; height: 26px; opacity: .2; filter: brightness(0) invert(9.4%); }
 nav { display: flex; flex-wrap: wrap; column-gap: 40px; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
-nav a:hover, .page-back:hover { text-decoration: underline; }
+.site-header nav a { position: relative; color: var(--color-text); font-size: 16px; }
+/* Hover/active line: 2px thick, 2px below the text, drawn without changing the link box or nav height. */
+.site-header nav a::after { content: ""; position: absolute; inset-inline: 0; top: calc(50% + .75em + 2px); height: 2px; background: transparent; }
+.site-header nav a:hover::after, .site-header nav a[aria-current]::after { background: var(--color-accent); }
+.page-back:hover { text-decoration: underline; }
 .page-back { display: inline-flex; align-items: center; min-height: 44px; font-size: .875rem; text-decoration: none; }
 main { display: grid; gap: 160px; padding-top: 80px; }
 section, footer, .resume { scroll-margin-top: 24px; }
@@ -36,48 +41,39 @@ h3 { font-size: 1.375rem; font-weight: 600; line-height: 1.3; }
 p { max-width: 640px; }
 .muted, .project-meta, .work-status { color: var(--color-text-muted); }
 /* Figma H2 scale: the one-line intro sits under the display name without competing with it. */
-.tagline { max-width: 760px; color: var(--color-text-secondary); font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem); font-weight: 300; line-height: 1.25; }
+.tagline { max-width: 760px; color: var(--color-text-muted); font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2rem); font-weight: 300; line-height: 1.25; }
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 /* Project info row (role, team, timeline, tools) reuses the hero facts style with four columns. */
 .case-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 900px; margin-top: 16px; }
 dt { font-size: .8125rem; font-weight: 600; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; }
-dt { margin-bottom: 8px; color: var(--color-text-secondary); }
-.group-title { margin-top: 40px; color: var(--color-text-secondary); font-size: .8125rem; font-weight: 600; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; }
+dt { margin-bottom: 8px; color: var(--color-text-muted); }
+.group-title { margin-top: 40px; color: var(--color-text-muted); font-size: .8125rem; font-weight: 600; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; }
 .work-group + .work-group { margin-top: 64px; }
-.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; margin-top: 24px; }
-.project-grid > :nth-child(even) { --tilt: 1.1deg; --tape-x: 57%; }
-.project { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; min-width: 0; }
-.section-intro { margin-top: 24px; color: var(--color-text-secondary); }
-/* A single row that fills the cover keeps tall artwork inside its 80% area, so every cover keeps its ratio and captions line up. */
-.cover { position: relative; display: grid; grid-template-rows: minmax(0, 1fr); place-items: center; flex-basis: 100%; aspect-ratio: 587 / 360; min-height: 0; margin-bottom: 16px; }
-.paper { position: absolute; inset: 0; filter: url(#rough-edge); transform: rotate(var(--tilt, -1.4deg)); transition: transform 150ms ease-out; }
-.cover-lavender .paper { background: var(--color-lavender); }
-.cover-mist .paper { background: var(--color-mist); }
-.cover-ink .paper { background: var(--color-ink); }
-.project-card-link:hover .paper { transform: rotate(0); }
-.tape { position: absolute; z-index: 2; top: -14px; left: calc(var(--tape-x, 45%) - 48px); width: 96px; height: 28px; background: var(--color-green); opacity: .92; transform: rotate(-3deg); }
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 24px; }
+.project { min-width: 0; }
+.section-intro { margin-top: 24px; color: var(--color-text-muted); }
+/* Thumbnail box: screenshots are centred and contained (never cropped). */
+.cover { position: relative; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; min-height: 0; padding: 20px; overflow: hidden; border-radius: 16px; background: var(--color-card); margin-bottom: 14px; }
+.cover.card--neutral { background: var(--color-card-neutral); }
+/* Projects without a screenshot show their name inside the box, bottom-left. */
+.cover-title { align-self: flex-end; margin-inline-end: auto; color: var(--color-text); font-size: 28px; font-weight: 300; font-style: italic; line-height: 1.1; }
 /* One equal column per image, whatever the count. */
-.cover-art { position: relative; z-index: 1; display: grid; grid-template-rows: minmax(0, 1fr); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px; width: 88%; height: 80%; }
+.cover-art { position: relative; z-index: 1; display: grid; grid-template-rows: minmax(0, 1fr); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px; width: 100%; height: 100%; }
 .cover-art img { display: block; width: 100%; height: 100%; min-width: 0; object-fit: contain; }
-/* Mixed artwork: every image becomes the same 3:4 box; taller pieces show their top part. */
-.cover-art-crop { align-items: center; }
-.cover-art-crop img { height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
-.sheridan-screens { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 3%; width: 92%; height: 84%; }
+.sheridan-screens { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 3%; width: 100%; height: 100%; }
 .sheridan-screens img { display: block; width: auto; max-width: 31%; height: 100%; border-radius: 12px; object-fit: contain; }
-/* Figma placeholder caption for covers without artwork yet; secondary ink instead of 50% ink keeps WCAG AA contrast on mist. */
-.cover-note { position: relative; z-index: 1; color: var(--color-text-secondary); font-size: .8125rem; font-weight: 600; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; }
 .project-card-link { display: block; min-width: 0; color: inherit; text-decoration: none; }
-.project > h4 { font-size: 1rem; font-weight: 600; }
-/* In-progress tag: a Figma pill in the accent green (green is for tags only), quieter than a button. */
-.project-tag { padding-inline: 10px; border-radius: 999px; background: var(--color-green); font-size: .8125rem; font-weight: 600; line-height: 1.6; }
+.project > h4 { font-size: 20px; font-weight: 600; }
+.project-meta { font-size: 16px; }
+/* Tag pill sits in the thumbnail's top-left corner. */
+.project-tag { position: absolute; top: 16px; left: 16px; z-index: 2; padding: 6px 12px; border-radius: 999px; background: var(--color-accent); color: var(--color-text); font-size: 13px; font-weight: 600; line-height: 1.2; }
 .project-card-link:hover h4, .exploration-grid > a:hover h3 { text-decoration: underline; text-underline-offset: .3em; }
 figcaption { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 24px; }
 strong { font-weight: 600; }
-.project-meta::before { content: '/'; margin-inline-end: 10px; opacity: .6; }
 .work-status { margin-top: 40px; }
 .exploration-grid { column-count: 4; column-gap: 24px; margin-top: 40px; }
 .exploration-grid > a { display: inline-block; width: 100%; margin-bottom: 48px; color: inherit; text-decoration: none; break-inside: avoid; }
-.exploration-card img { display: block; width: 100%; height: auto; background: var(--color-mist); }
+.exploration-card img { display: block; width: 100%; height: auto; background: var(--color-card-neutral); }
 .exploration-collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 /* Cells follow the artwork ratio, so there are no letterbox edges. */
 .exploration-collage img { display: block; width: 100%; height: auto; min-width: 0; }
@@ -98,7 +94,7 @@ strong { font-weight: 600; }
 .case-study { min-width: 0; }
 .case-header { display: grid; gap: 16px; }
 .eyebrow { color: var(--color-text-muted); font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.case-intro { max-width: 720px; font-size: 1.25rem; color: var(--color-text-secondary); }
+.case-intro { max-width: 720px; font-size: 1.25rem; color: var(--color-text-muted); }
 /* Columns follow the image count so the last row is never left with one lone image. */
 .case-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 24px; max-width: 900px; margin-top: 80px; }
 /* :where keeps these count rules at class weight, so the mobile one-column rule below can override them. */
@@ -106,7 +102,7 @@ strong { font-weight: 600; }
 .case-gallery:where(:has(> :nth-child(4):last-child), :has(> :nth-child(7):last-child)) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .case-gallery.gallery-one { grid-template-columns: minmax(0, 640px); }
 .case-section .case-gallery { margin-top: 16px; }
-.case-gallery img, .case-gallery video { display: block; width: 100%; height: auto; background: var(--color-mist); }
+.case-gallery img, .case-gallery video { display: block; width: 100%; height: auto; background: var(--color-card-neutral); }
 .case-section { display: grid; gap: 16px; max-width: 900px; margin-top: 112px; }
 .case-section h2 { max-width: 720px; font-size: 2rem; line-height: 1.2; }
 .case-section h3 { margin-top: 8px; }
@@ -120,7 +116,7 @@ strong { font-weight: 600; }
 .back-link { display: inline-block; margin-top: 112px; padding-block: 12px; }
 .toc { display: flex; flex-direction: column; flex-wrap: nowrap; font-size: .875rem; }
 .toc a { min-height: 32px; color: var(--color-text-muted); }
-.toc a[aria-current="true"] { color: var(--color-ink); }
+.toc a[aria-current="true"] { color: var(--color-text); }
 .toc-link::before { content: ""; inline-size: 5px; block-size: 5px; margin-inline: -11px 6px; background: currentColor; opacity: 0; }
 .toc-link[aria-current="true"]::before { opacity: 1; }
 @media (min-width: 1001px) and (min-height: 481px) {
@@ -134,6 +130,7 @@ strong { font-weight: 600; }
 }
 /* Narrow or short screens: no rail contents, just the back link above the project. */
 @media (max-width: 1000px), (max-height: 480px) { .toc { display: none; } }
+@media (max-width: 768px) { .project-grid { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 1000px) {
   .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .page { width: calc(100% - 48px); }
@@ -147,11 +144,9 @@ strong { font-weight: 600; }
   main { padding-top: 64px; }
   .facts, .project-grid { grid-template-columns: minmax(0, 1fr); }
   .facts { gap: 24px; }
-  .cover { aspect-ratio: 1.3; }
   .artwork-cover { padding: 8px; gap: 4px; }
   .case-columns, .value-list, .case-gallery { grid-template-columns: minmax(0, 1fr); }
   .case-gallery { margin-top: 48px; }
   .case-section, .back-link { margin-top: 80px; }
 }
 @media (max-width: 480px) { .exploration-grid { column-count: 1; } }
-@media (prefers-reduced-motion: reduce) { .paper { transition: none; } }

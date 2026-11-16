@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-11-15T04:26:25.814Z",
         "reason": "agent decision: Figma Ash visual identity type scale specifies Display 72/105% and H1 48/110% for the hero and section headings; body text stays at 1.5"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-16T02:44:40.779Z",
+        "reason": "user decided: Ashley specified --color-bg #FBF4E1 (light tint of Pantone Anise Flower) as part of her new colour system"
       }
     ]
   }

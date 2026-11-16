@@ -342,3 +342,15 @@
 2. The centring added last time is now limited to `.cover-art-crop` (the roopy card) and removed from the shared `.cover-art`.
 3. Captured the Visual design and UI/UX cards on localhost:3000 at 1280px.
 4. At Ashley's request, the roopy card cover is now the MBTI infographic, the SKIN Tea Break poster, and the 招募·情绪体验官 poster (all 3:4, so none is cropped). Captured at 1280px.
+
+## New colour system, logo/nav, and rounded project cards
+
+1. New `:root` tokens: bg #FBF4E1, card #F37E9B, card-neutral #F3EAD2, accent #3AB0A2, text #1A1A1A, and muted rgba(26,26,26,.72). Old tokens were remapped: ink → text, #444 and #6B6B6B → muted, green → accent (tags, `::selection`), mist → card-neutral (image-loading placeholders). The footer line stays rgba(26,26,26,.2). `--color-green` remains only for the unused `.flow-line`.
+2. Logo is 26px tall at opacity .6. `.brand` keeps `min-height: 59px`, so the header stays 139px. Top-nav links are text colour and 16px with no underline. A 2px accent line drawn by `::after`, 2px below the text, shows on hover and on `aria-current` (Work on project pages). The styles are scoped to `.site-header nav`, so the project ToC is unaffected.
+3. Selected work cards: removed the torn paper, tape, and the `#rough-edge` SVG filter. A 3-column grid with a 32px gap becomes 1 column at 768px and below. The thumbnail box is 4:3 with a 16px radius, 20px padding, and card background (Sheridan Ride uses `card--neutral`). Screenshots are contained and centred, with no crop. In-progress cards show their name bottom-left at 28px light italic instead of the "IN PROGRESS" placeholder. Tags sit in the box top-left. Below the box: 20px title, 16px muted meta, two lines, and the "/" removed. Text, links, and images are unchanged.
+4. Captured on localhost:3000 at 1280px (hero, cards, project page) and 700px. Not committed, pending Ashley's browser check.
+
+## Card backgrounds and tag layer
+
+1. roopy and Endpaper Talks now use `card--neutral`. Sheridan Ride is back to the default card pink.
+2. `.project-tag` is now `z-index: 2`, so the In progress pill sits above the screenshots (which are `z-index: 1` and come later in the markup).
