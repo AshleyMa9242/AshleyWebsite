@@ -359,3 +359,7 @@
 
 1. Ashley replaced two source posters in `oldPortfolioAssets` (`135X325X3-01.png` → endpaper-talks.jpg and `-03.png` → x-art-bookshop.jpg). Re-exported both web copies (1200px tall, JPEG 82): now 498x1200 and 499x1200. Updated their width attributes in project.js and on the homepage card. Source files are unchanged.
 2. Captured the homepage card and the Endpaper page on localhost:3000 at 1280px.
+
+## Rename Personal explorations
+
+1. The section heading is now "Poster & graphic studies" with the intro "Posters, packaging, and graphic experiments.", replacing "Personal explorations / Non-commercial design studies." The section id and the cards are unchanged.
