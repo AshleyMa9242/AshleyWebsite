@@ -354,3 +354,8 @@
 
 1. roopy and Endpaper Talks now use `card--neutral`. Sheridan Ride is back to the default card pink.
 2. `.project-tag` is now `z-index: 2`, so the In progress pill sits above the screenshots (which are `z-index: 1` and come later in the markup).
+
+## Updated Endpaper posters
+
+1. Ashley replaced two source posters in `oldPortfolioAssets` (`135X325X3-01.png` → endpaper-talks.jpg and `-03.png` → x-art-bookshop.jpg). Re-exported both web copies (1200px tall, JPEG 82): now 498x1200 and 499x1200. Updated their width attributes in project.js and on the homepage card. Source files are unchanged.
+2. Captured the homepage card and the Endpaper page on localhost:3000 at 1280px.
