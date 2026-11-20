@@ -103,6 +103,7 @@ strong { font-weight: 600; }
 .case-gallery.gallery-one { grid-template-columns: minmax(0, 640px); }
 .case-section .case-gallery { margin-top: 16px; }
 .case-gallery img, .case-gallery video { display: block; width: 100%; height: auto; background: var(--color-card-neutral); }
+.case-gallery img[src$=".png"] { background: none; } /* PNG screens can have transparent rounded corners */
 .case-section { display: grid; gap: 16px; max-width: 900px; margin-top: 112px; }
 .case-section h2 { max-width: 720px; font-size: 2rem; line-height: 1.2; }
 .case-section h3 { margin-top: 8px; }

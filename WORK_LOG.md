@@ -363,3 +363,14 @@
 ## Rename Personal explorations
 
 1. The section heading is now "Poster & graphic studies" with the intro "Posters, packaging, and graphic experiments.", replacing "Personal explorations / Non-commercial design studies." The section id and the cards are unchanged.
+
+## Photo Vocab App screens
+
+1. Moved Ashley's six UI screenshots from `assets/images/Photo_vacob_app/` to `assets/images/photoVocabApp/` with URL-safe names in flow order (01-learn … 06-review, 375x812). The old folder was removed.
+2. Added them to the `photo-vocab-app` images array in project.js, so they show in the gallery at the top of the project page, like Sheridan Ride. Homepage card unchanged.
+3. The screens have transparent rounded corners, and the gallery's beige loading background showed through them. Gallery PNGs now have no background (style.css). JPGs keep the placeholder.
+
+## UI/UX cards on beige
+
+1. Sheridan Ride, Photo Vocab App, and Case Study Workspace covers now use `card--neutral` (#F3EAD2), like the Visual design cards.
+2. The Photo Vocab App card now shows three screens (Learn results, Library, Word detail) using the same `.sheridan-screens` layout as Sheridan Ride, replacing the italic title placeholder.
