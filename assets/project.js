@@ -5,7 +5,7 @@ const projects = {
     title: "Sheridan Ride",
     category: "UX/UI · Student carpool platform",
     intro: "A student-only carpool platform that matches Sheridan students by route, time, and destination, not only by the same starting point.",
-    facts: [["My role", "UX/UI Design Lead · Product Management"], ["Team", "4 people (product manager, front-end, back-end, and me)"], ["Timeline", "Fall 2026 · In progress"], ["Tools", "Figma, Notion"]],
+    facts: [["Prototype", `<a href="https://sheridan-ride-finder.lovable.app/" target="_blank" rel="noopener">Clickable prototype ↗</a>`], ["My role", "UX/UI Design Lead · Product Management"], ["Team", "4 people (product manager, front-end, back-end, and me)"], ["Timeline", "Fall 2026 · In progress"], ["Tools", "Figma, Notion"]],
     images: [
       image("assets/images/sheridanRide/01-home-page.png", "Sheridan Ride home screen with route search and map", 804, 1748),
       image("assets/images/sheridanRide/02-search-results.png", "Sheridan Ride search results listing four available rides", 804, 1748),
@@ -40,7 +40,7 @@ const projects = {
   "photo-vocab-app": {
     title: "Photo Vocab App",
     category: "Product concept · In progress",
-    intro: "Learn English from photos of your real life. Each word is linked to the moment you saw it.",
+    intro: "Photo Vocab helps you learn English words from photos of your own daily life, then keep them as stickers you can review.",
     images: [
       image("assets/images/photoVocabApp/01-learn.png", "Photo Vocab App Learn screen with a breakfast photo and a camera button", 375, 812),
       image("assets/images/photoVocabApp/02-learn-results.png", "Learn results labelling nine words on the breakfast photo, such as bread, salad, and iced latte", 375, 812),

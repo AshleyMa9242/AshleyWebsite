@@ -374,3 +374,11 @@
 
 1. Sheridan Ride, Photo Vocab App, and Case Study Workspace covers now use `card--neutral` (#F3EAD2), like the Visual design cards.
 2. The Photo Vocab App card now shows three screens (Learn results, Library, Word detail) using the same `.sheridan-screens` layout as Sheridan Ride, replacing the italic title placeholder.
+
+## Sheridan Ride prototype link
+
+1. Added "Prototype: Clickable prototype ↗" (https://sheridan-ride-finder.lovable.app/, opens in a new tab) as the first row of the Sheridan Ride facts list, above My role.
+
+## Photo Vocab App intro
+
+1. Replaced the intro with Ashley's new line: "Photo Vocab helps you learn English words from photos of your own daily life, then keep them as stickers you can review."
