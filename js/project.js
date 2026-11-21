@@ -41,14 +41,7 @@ const projects = {
     title: "Photo Vocab App",
     category: "Product concept · In progress",
     intro: "Photo Vocab helps you learn English words from photos of your own daily life, then keep them as stickers you can review.",
-    images: [
-      image("assets/images/photoVocabApp/01-learn.png", "Photo Vocab App Learn screen with a breakfast photo and a camera button", 375, 812),
-      image("assets/images/photoVocabApp/02-learn-results.png", "Learn results labelling nine words on the breakfast photo, such as bread, salad, and iced latte", 375, 812),
-      image("assets/images/photoVocabApp/03-library.png", "Library screen listing Breakfast, Bus stop, and Grocery store scenes with word stickers", 375, 812),
-      image("assets/images/photoVocabApp/04-scene-detail.png", "Breakfast scene detail with collected words and useful phrases", 375, 812),
-      image("assets/images/photoVocabApp/05-word-detail.png", "Word detail for salad with pronunciation, Chinese translation, and an example sentence", 375, 812),
-      image("assets/images/photoVocabApp/06-review.png", "Review flashcard showing the salad sticker with Again and Got it buttons", 375, 812)
-    ],
+    images: [    ],
     content: `
       <section class="case-section"><h2>Who</h2><p>Newcomers in Canada who are learning English, like me.</p></section>
       <section class="case-section"><h2>The pivot</h2><p>I started with a photo search app, but Apple and Google AI search already solved that problem. So I reframed it: instead of using memory to find photos, use photos to remember words.</p></section>

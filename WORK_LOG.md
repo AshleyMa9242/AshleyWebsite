@@ -382,3 +382,7 @@
 ## Photo Vocab App intro
 
 1. Replaced the intro with Ashley's new line: "Photo Vocab helps you learn English words from photos of your own daily life, then keep them as stickers you can review."
+
+## CSS/JS moved to css/ and js/
+
+1. Ashley moved `assets/style.css` → `css/style.css` and `assets/project.js` → `js/project.js`. Updated the stylesheet link in index.html and project.html and the script tag in project.html. All local src/href paths in both pages and all image/video paths in project.js resolve.
