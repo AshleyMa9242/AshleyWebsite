@@ -386,3 +386,7 @@
 ## CSS/JS moved to css/ and js/
 
 1. Ashley moved `assets/style.css` → `css/style.css` and `assets/project.js` → `js/project.js`. Updated the stylesheet link in index.html and project.html and the script tag in project.html. All local src/href paths in both pages and all image/video paths in project.js resolve.
+
+## Photo Vocab App card emptied
+
+1. At Ashley's request, removed the three screens from the Photo Vocab App homepage cover. The cover is now an empty beige box with only the In progress tag. The project page gallery is unchanged.
