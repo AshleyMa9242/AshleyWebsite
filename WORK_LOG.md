@@ -390,3 +390,11 @@
 ## Photo Vocab App card emptied
 
 1. At Ashley's request, removed the three screens from the Photo Vocab App homepage cover. The cover is now an empty beige box with only the In progress tag. The project page gallery is unchanged.
+
+## Photo Vocab App card hidden
+
+1. At Ashley's request, removed the Photo Vocab App card from the homepage UI/UX grid by wrapping it in an HTML comment (easy to restore). The project page data in js/project.js and the screenshots in assets/images/photoVocabApp/ are kept.
+
+## Selected work: two cards per row
+
+1. `.project-grid` is now 2 columns (was 3), so the UI/UX and Visual design cards fill the 1200px frame. The 32px gap and the single column at 768px and below are unchanged.

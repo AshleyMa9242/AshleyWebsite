@@ -37,16 +37,6 @@ const projects = {
       <section class="case-section"><h2>How it works</h2></section>
       <section class="case-section"><h2>Why it is different</h2></section>`
   },
-  "photo-vocab-app": {
-    title: "Photo Vocab App",
-    category: "Product concept · In progress",
-    intro: "Photo Vocab helps you learn English words from photos of your own daily life, then keep them as stickers you can review.",
-    images: [    ],
-    content: `
-      <section class="case-section"><h2>Who</h2><p>Newcomers in Canada who are learning English, like me.</p></section>
-      <section class="case-section"><h2>The pivot</h2><p>I started with a photo search app, but Apple and Google AI search already solved that problem. So I reframed it: instead of using memory to find photos, use photos to remember words.</p></section>
-      <section class="case-section"><h2>Key insight</h2><p>Words from real life are easier to remember.</p></section>`
-  },
   roopy: {
     title: "roopy", category: "Graphic design & social media",
     intro: "Brand visuals and social content developed across fragrance campaigns, editorial layouts, Skin Tea Break, and a weekend playlist series.",
